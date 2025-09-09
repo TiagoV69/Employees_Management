@@ -42,5 +42,14 @@ namespace pjEmployeesManagement.Data
             }
             return Cadena;
         }
+
+        public static Conexion crearInstancia(){
+            if (Con == null)
+            {
+
+                Con = new Conexion();
+            }
+            return Con;
+        }
     }
 }
