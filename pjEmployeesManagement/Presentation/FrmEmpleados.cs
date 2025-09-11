@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pjEmployeesManagement.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,44 +18,19 @@ namespace pjEmployeesManagement.Presentation
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        #region "Métodos"
+        private void CargarEmpleados(string cBusqueda)
         {
 
+            D_Empleados Datos = new D_Empleados();
+            dgvList.DataSource = Datos.Listar_empleados(cBusqueda);
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            scscc
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {cscs
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            CargarEmpleados("%");
         }
     }
 }
