@@ -17,7 +17,7 @@ namespace pjEmployeesManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConectar());
+            Application.Run(new FrmEmpleados());
         }
     }
 }
