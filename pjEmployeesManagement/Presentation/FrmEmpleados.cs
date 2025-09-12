@@ -37,11 +37,20 @@ namespace pjEmployeesManagement.Presentation
             dgvList.Columns[5].Width = 120;
             dgvList.Columns[6].Width = 110;
         }
+
+        private void CargarDepartamentos()
+        {
+            D_Departamentos Datos = new D_Departamentos();
+            cmbDepartment.DataSource = Datos.Listar_departamentos();
+            cmbDepartment.ValueMember = "id_departamento";
+            cmbDepartment.DisplayMember = "nombre_departamento";
+        }
         #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             CargarEmpleados("%");
+            CargarDepartamentos();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\D_Departamentos.cs" />
     <Compile Include="Data\D_Empleados.cs" />
     <Compile Include="Presentation\FrmConectar.cs">
       <SubType>Form</SubType>
