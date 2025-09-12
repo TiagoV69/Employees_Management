@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace pjEmployeesManagement.Data
 {
-    internal class D_Departamentos
+    public class D_Departamentos
     {
         public DataTable Listar_departamentos()
         {
