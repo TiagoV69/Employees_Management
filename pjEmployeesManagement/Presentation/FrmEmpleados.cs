@@ -45,12 +45,21 @@ namespace pjEmployeesManagement.Presentation
             cmbDepartment.ValueMember = "id_departamento";
             cmbDepartment.DisplayMember = "nombre_departamento";
         }
+
+        private void CargarCargos()
+        {
+            D_Cargos Datos = new D_Cargos();
+            cmbCharge.DataSource = Datos.Listar_Cargos();
+            cmbCharge.ValueMember = "id_cargo";
+            cmbCharge.DisplayMember = "nombre_cargo";
+        }
         #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             CargarEmpleados("%");
             CargarDepartamentos();
+            CargarCargos();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
