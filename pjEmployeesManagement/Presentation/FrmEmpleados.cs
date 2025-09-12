@@ -44,6 +44,7 @@ namespace pjEmployeesManagement.Presentation
             cmbDepartment.DataSource = Datos.Listar_departamentos();
             cmbDepartment.ValueMember = "id_departamento";
             cmbDepartment.DisplayMember = "nombre_departamento";
+            cmbDepartment.SelectedIndex = -1;
         }
 
         private void CargarCargos()
@@ -52,6 +53,7 @@ namespace pjEmployeesManagement.Presentation
             cmbCharge.DataSource = Datos.Listar_Cargos();
             cmbCharge.ValueMember = "id_cargo";
             cmbCharge.DisplayMember = "nombre_cargo";
+            cmbCharge.SelectedIndex = -1;   
         }
         #endregion
 

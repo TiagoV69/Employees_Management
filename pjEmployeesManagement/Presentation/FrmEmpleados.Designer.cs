@@ -95,7 +95,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
@@ -114,7 +114,7 @@
             // 
             this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReport.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@
             // 
             this.btnLeave.BackColor = System.Drawing.Color.Crimson;
             this.btnLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeave.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnLeave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLeave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeave.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLeave.ForeColor = System.Drawing.Color.White;
@@ -152,7 +152,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
@@ -171,7 +171,7 @@
             // 
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.ForeColor = System.Drawing.Color.White;
@@ -291,6 +291,7 @@
             // 
             // dtpDateBirth
             // 
+            this.dtpDateBirth.Enabled = false;
             this.dtpDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateBirth.Location = new System.Drawing.Point(664, 159);
             this.dtpDateBirth.Name = "dtpDateBirth";
@@ -299,6 +300,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(190, 162);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(347, 31);
@@ -306,6 +308,7 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.Location = new System.Drawing.Point(190, 255);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(272, 31);
@@ -313,6 +316,7 @@
             // 
             // textAddress
             // 
+            this.textAddress.Enabled = false;
             this.textAddress.Location = new System.Drawing.Point(190, 209);
             this.textAddress.Name = "textAddress";
             this.textAddress.Size = new System.Drawing.Size(562, 31);
@@ -320,6 +324,7 @@
             // 
             // txtSalary
             // 
+            this.txtSalary.Enabled = false;
             this.txtSalary.Location = new System.Drawing.Point(626, 255);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(238, 31);
@@ -327,6 +332,8 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartment.Enabled = false;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(190, 305);
             this.cmbDepartment.Name = "cmbDepartment";
@@ -335,6 +342,8 @@
             // 
             // cmbCharge
             // 
+            this.cmbCharge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharge.Enabled = false;
             this.cmbCharge.FormattingEnabled = true;
             this.cmbCharge.Location = new System.Drawing.Point(626, 305);
             this.cmbCharge.Name = "cmbCharge";
@@ -367,7 +376,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Crimson;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
@@ -381,12 +390,13 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -400,12 +410,13 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Visible = false;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
