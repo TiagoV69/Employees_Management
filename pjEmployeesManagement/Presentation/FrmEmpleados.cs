@@ -24,13 +24,34 @@ namespace pjEmployeesManagement.Presentation
 
             D_Empleados Datos = new D_Empleados();
             dgvList.DataSource = Datos.Listar_empleados(cBusqueda);
+
+            FormatolistaEmpleados();
         }
 
+        private void FormatolistaEmpleados()
+        {
+            dgvList.Columns[0].Width = 45;
+            dgvList.Columns[1].Width = 150;
+            dgvList.Columns[2].Width = 190; 
+            dgvList.Columns[4].Width = 130;
+            dgvList.Columns[5].Width = 120;
+            dgvList.Columns[6].Width = 110;
+        }
         #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             CargarEmpleados("%");
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            CargarEmpleados(txtSearch.Text);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            CargarEmpleados(txtSearch.Text);
         }
     }
 }
