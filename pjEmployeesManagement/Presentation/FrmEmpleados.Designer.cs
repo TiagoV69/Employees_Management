@@ -50,7 +50,7 @@
             this.dtpDateBirth = new System.Windows.Forms.DateTimePicker();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.textAddress = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.cmbCharge = new System.Windows.Forms.ComboBox();
@@ -185,12 +185,14 @@
             this.btnNew.Text = "New ";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -314,13 +316,13 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(272, 31);
             this.txtPhoneNumber.TabIndex = 13;
             // 
-            // textAddress
+            // txtAddress
             // 
-            this.textAddress.Enabled = false;
-            this.textAddress.Location = new System.Drawing.Point(190, 209);
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(562, 31);
-            this.textAddress.TabIndex = 14;
+            this.txtAddress.Enabled = false;
+            this.txtAddress.Location = new System.Drawing.Point(190, 209);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(562, 31);
+            this.txtAddress.TabIndex = 14;
             // 
             // txtSalary
             // 
@@ -391,6 +393,7 @@
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -416,7 +419,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(57)))), ((int)(((byte)(228)))));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Cross;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
@@ -442,7 +445,7 @@
             this.Controls.Add(this.cmbCharge);
             this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.txtSalary);
-            this.Controls.Add(this.textAddress);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.dtpDateBirth);
@@ -488,7 +491,7 @@
         private System.Windows.Forms.DateTimePicker dtpDateBirth;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.TextBox textAddress;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.ComboBox cmbCharge;

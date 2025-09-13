@@ -55,6 +55,29 @@ namespace pjEmployeesManagement.Presentation
             cmbCharge.DisplayMember = "nombre_cargo";
             cmbCharge.SelectedIndex = -1;   
         }
+
+        private void ActivarTextos(bool bEstado) {            
+            txtName.Enabled = bEstado;
+            txtAddress.Enabled = bEstado;
+            dtpDateBirth.Enabled = bEstado;
+            txtPhoneNumber.Enabled = bEstado;
+            txtSalary.Enabled = bEstado;
+            cmbDepartment.Enabled = bEstado;
+            cmbCharge.Enabled = bEstado;
+
+            txtSearch.Enabled = !bEstado;
+        }
+
+        private void ActivarBotones(bool bEstado)
+        {
+            btnNew.Enabled = bEstado;
+            btnUpdate.Enabled = bEstado;
+            btnDelete.Enabled = bEstado;
+            btnReport.Enabled = bEstado;
+
+            btnSave.Visible = !bEstado;
+            btnCancel.Visible = !bEstado;
+        }
         #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
@@ -62,6 +85,7 @@ namespace pjEmployeesManagement.Presentation
             CargarEmpleados("%");
             CargarDepartamentos();
             CargarCargos();
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -72,6 +96,20 @@ namespace pjEmployeesManagement.Presentation
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             CargarEmpleados(txtSearch.Text);
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {   
+            ActivarTextos(true);
+            ActivarBotones(false);
+
+            txtName.Select();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ActivarTextos(false);
+            ActivarBotones(true);
         }
     }
 }
