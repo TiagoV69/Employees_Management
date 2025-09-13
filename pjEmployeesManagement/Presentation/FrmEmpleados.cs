@@ -18,6 +18,12 @@ namespace pjEmployeesManagement.Presentation
             InitializeComponent();
         }
 
+        #region "Variables"
+
+        int nIdEmpleado = 0;
+
+        #endregion
+
         #region "Métodos"
         private void CargarEmpleados(string cBusqueda)
         {
@@ -78,6 +84,19 @@ namespace pjEmployeesManagement.Presentation
             btnSave.Visible = !bEstado;
             btnCancel.Visible = !bEstado;
         }
+
+        private void SeleccionarEmpleado()
+        {
+            nIdEmpleado = Convert.ToInt32(dgvList.CurrentRow.Cells["ID"].Value);
+
+            txtName.Text = Convert.ToString(dgvList.CurrentRow.Cells["Nombre"].Value);
+            txtAddress.Text = Convert.ToString(dgvList.CurrentRow.Cells["Direccion"].Value);
+            dtpDateBirth.Value = Convert.ToDateTime(dgvList.CurrentRow.Cells["Fecha nacimiento"].Value);
+            txtPhoneNumber.Text = Convert.ToString(dgvList.CurrentRow.Cells["Telefono"].Value);
+            txtSalary.Text = Convert.ToString(dgvList.CurrentRow.Cells["Salario"].Value);
+            cmbDepartment.SelectedIndex = Convert.ToInt32(dgvList.CurrentRow.Cells["Departamento"].Value) - 1;
+            cmbCharge.SelectedIndex = Convert.ToInt32(dgvList.CurrentRow.Cells["Cargo"].Value) - 1;
+        }
         #endregion
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
@@ -110,6 +129,11 @@ namespace pjEmployeesManagement.Presentation
         {
             ActivarTextos(false);
             ActivarBotones(true);
+        }
+
+        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SeleccionarEmpleado();
         }
     }
 }

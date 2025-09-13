@@ -373,6 +373,7 @@
             this.dgvList.RowTemplate.Height = 24;
             this.dgvList.Size = new System.Drawing.Size(833, 165);
             this.dgvList.TabIndex = 20;
+            this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellClick);
             // 
             // btnCancel
             // 
